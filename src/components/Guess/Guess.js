@@ -1,15 +1,13 @@
 import React from "react";
 
-function Guess({ value }) {
+function Guess({ value = "" }) {
   return (
     <p className="guess">
-      {value
-        ? value.split("").map((letter, index) => (
-            <span key={index} className="cell">
-              {letter}
-            </span>
-          ))
-        : value}
+      {value.split("").map((letter, index) => (
+        <span key={index} className="cell">
+          {letter}
+        </span>
+      ))}
     </p>
   );
 }
